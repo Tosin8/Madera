@@ -15,11 +15,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        
       ),
       home: const HomePage(),
     );
   }
+}
+
+class Contact {
+  final String name;
 }
 
 class HomePage extends StatelessWidget {
@@ -29,7 +32,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Title'),
+        title: const Text('Home Page'),
       ),
       body: Container(),
     );

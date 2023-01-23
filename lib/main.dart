@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'components/contact_book_class.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -21,18 +23,19 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
-
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final contactBook = ContactBook();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Page'),
       ),
-      body: Container(),
+      body: ListView.builder(
+        itemCount: contactBook.length, 
+        itemBuilder: ),
     );
   }
 }

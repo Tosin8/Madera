@@ -21,8 +21,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Contact {
+class Contact { // Creating Contact Class. 
   final String name;
+  const Contact({required this.name}); //constructor.
+}
+
+class ContactBook{ // Creating Contact Book. 
+
 }
 
 class HomePage extends StatelessWidget {

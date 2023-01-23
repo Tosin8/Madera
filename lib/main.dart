@@ -34,8 +34,13 @@ class HomePage extends StatelessWidget {
         title: const Text('Home Page'),
       ),
       body: ListView.builder(
-        itemCount: contactBook.length, 
-        itemBuilder: ),
+          itemCount: contactBook.length,
+          itemBuilder: (context, index) {
+            final contact = contactBook.contact(atIndex: index)!;
+            return ListTile(
+              title: Text(contact.name),
+            );
+          }),
     );
   }
 }

@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
- 
 class Contact {
   // Creating Contact Class.
   final String name;
@@ -13,7 +11,10 @@ class ContactBook {
   factory ContactBook() => _shared;
 
   // Creating Contact Storage, using the list because of using a ListView.builder.
-  final List<Contact> _contacts = [];
+  final List<Contact> _contacts = [
+    // const Contact(name: 'Foo Bar')
+    // adding contacts manually , the code sample above.
+  ];
 
   int get length => _contacts.length; // exposing how many contacts to have.
 

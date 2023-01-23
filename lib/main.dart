@@ -33,7 +33,7 @@ class ContactBook {
   static final ContactBook _shared = ContactBook._sharedInstance();
   factory ContactBook() => _shared;
 
-  // Creating Contact Storage
+  // Creating Contact Storage, using the list because of using a ListView.builder.
   final List<Contact> _contacts = [];
 
   int get length => _contacts.length; // exposing how many contacts to have.
@@ -42,9 +42,17 @@ class ContactBook {
   void add({required Contact contact}) {
     _contacts.add(contact);
   }
+
+  // Simple Remove Function on Contact Book
+  void remove({required Contact contact}) {
+    _contacts.remove(contact);
+  }
+
+  // A function to retrieve contacts with index
+  Contact? contact({required int atIndex}) =>
+      _contacts.length > atIndex ? _contacts[atIndex] : null;
 }
 
-// Simple Remove Function on Contact Book
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 

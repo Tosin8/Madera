@@ -30,18 +30,20 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final contactBook = ContactBook();
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
-      ),
-      body: ListView.builder(
-          itemCount: contactBook.length,
-          itemBuilder: (context, index) {
-            final contact = contactBook.contact(atIndex: index)!;
-            return ListTile(
-              title: Text(contact.name),
-            );
-          }),
-      floatingActionButton: FloatingActionButton(onPressed: ), 
-    );
+        appBar: AppBar(
+          title: const Text('Home Page'),
+        ),
+        body: ListView.builder(
+            itemCount: contactBook.length,
+            itemBuilder: (context, index) {
+              final contact = contactBook.contact(atIndex: index)!;
+              return ListTile(
+                title: Text(contact.name),
+              );
+            }),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: const Icon(Icons.add),
+        ));
   }
 }

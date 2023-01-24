@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
 
 class NewContactView extends StatefulWidget {
   const NewContactView({super.key});
@@ -8,10 +8,22 @@ class NewContactView extends StatefulWidget {
 }
 
 class _NewContactViewState extends State<NewContactView> {
+  late final TextEditingController _controller; // To control text edit.
+
+  @override
+  void initState() {
+    _controller = TextEditingController();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(title: ), 
-    );
+        appBar: AppBar(
+          title: const Text('Add a new contact'),
+        ),
+        body: Column(
+          children: const [],
+        ));
   }
 }

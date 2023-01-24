@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'components/contact_book_class.dart';
+import 'components/new_contact.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,9 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const HomePage(),
+      routes: {
+        '/new-contact': (context) => const NewContactView(),
+      },
     );
   }
 }
@@ -42,8 +46,12 @@ class HomePage extends StatelessWidget {
                 title: Text(contact.name),
               );
             }),
+
+        // using floating action button press, send user to NewContactView.
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed('/new-contact');
+          },
           child: const Icon(Icons.add),
         ));
   }

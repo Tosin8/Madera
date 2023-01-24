@@ -38,9 +38,11 @@ class _NewContactViewState extends State<NewContactView> {
                   hintText: 'Enter a new contact name here...'),
             ),
             TextButton(
+              // adding textbutton and add contact upon pressing it and pop back too.
               onPressed: () {
                 final contact = Contact(name: _controller.text);
                 ContactBook().add(contact: contact);
+                Navigator.of(context).pop();
               },
               child: const Text('Add Contact'),
             ),

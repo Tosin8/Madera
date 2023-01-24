@@ -1,7 +1,11 @@
+import 'package:flutter/material.dart';
+import 'package:uuid/uuid.dart'; 
+
 class Contact {
   // Creating Contact Class.
   final String name;
-  const Contact({required this.name}); //constructor.
+  final String id; 
+    Contact({required this.name}): id =  const Uuid().v4(); //constructor.
 }
 
 class ContactBook extends ValueNotifier<list><Contact>> {
@@ -16,7 +20,7 @@ class ContactBook extends ValueNotifier<list><Contact>> {
     // adding contacts manually , the code sample above.
   ];
 
-  int get length => _contacts.length; // exposing how many contacts to have.
+  int get length => value.length; // exposing how many contacts to have., constructor changed from _contacts.lenght to value.lenght.
 
 // Simple Add Function on Contact Book
   void add({required Contact contact}) {

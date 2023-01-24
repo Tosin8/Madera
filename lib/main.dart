@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uuid/uuid.dart'; 
 
 import 'components/contact_book_class.dart';
 import 'components/new_contact.dart';
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Using ValueNotifier : To notify HomePage about changes to Contact Book. 
+// Using ValueNotifier : To notify HomePage about changes to Contact Book.
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

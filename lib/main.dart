@@ -1,4 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.
+dart';
+import 'package:uuid/uuid.dart'; 
 
 import 'components/contact_book_class.dart';
 import 'components/new_contact.dart';
@@ -27,6 +29,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// Using ValueNotifier : To notify HomePage about changes to Contact Book. 
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -35,7 +39,7 @@ class HomePage extends StatelessWidget {
     final contactBook = ContactBook();
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Home Page'),
+          title: const Text('Contact Book'),
           centerTitle: true,
         ),
         body: ListView.builder(
@@ -49,8 +53,8 @@ class HomePage extends StatelessWidget {
 
         // using floating action button press, send user to NewContactView.
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.of(context).pushNamed('/new-contact');
+          onPressed: () async {
+            await Navigator.of(context).pushNamed('/new-contact');
           },
           child: const Icon(Icons.add),
         ));

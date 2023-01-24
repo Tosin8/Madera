@@ -4,9 +4,9 @@ class Contact {
   const Contact({required this.name}); //constructor.
 }
 
-class ContactBook {
-  // Creating Contact Book.
-  ContactBook._sharedInstance(); // private constructor
+class ContactBook extends ValueNotifier<list><Contact>> {
+  // Creating Contact Book, now converting it to ValueNotifier<list><Contact>> begins from extends. 
+  ContactBook._sharedInstance() : super([]); // private constructor, including super extension after valueNotifier conversion. 
   static final ContactBook _shared = ContactBook._sharedInstance();
   factory ContactBook() => _shared;
 

@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final contactBook = ContactBook();
+    // final contactBook = ContactBook();
     return Scaffold(
         appBar: AppBar(
           title: const Text('Contact Book'),
@@ -42,15 +42,19 @@ class HomePage extends StatelessWidget {
         body: ValueListenableBuilder(
             valueListenable: ContactBook(),
             builder: (contact, value, child) {
+              final contacts = value as List<Contact>;
               return ListView.builder(
-                  itemCount: contactBook.length,
+                  itemCount: contacts.length,
                   itemBuilder: (context, index) {
-                    final contact = contactBook.contact(atIndex: index)!;
+                    final contact = contacts[index];
                     return ListTile(
                       title: Text(contact.name),
                     );
                   });
             }),
+
+        // using floating action button press, send user to NewContactView.
+
         floatingActionButton: FloatingActionButton(
           onPressed: () async {
             await Navigator.of(context).pushNamed('/new-contact');
@@ -59,8 +63,3 @@ class HomePage extends StatelessWidget {
         ));
   }
 }
-          
-         
-
-        // using floating action button press, send user to NewContactView.
-    

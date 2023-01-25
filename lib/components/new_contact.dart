@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'contact_book_class.dart';
 
+
 class NewContactView extends StatefulWidget {
   const NewContactView({super.key});
 

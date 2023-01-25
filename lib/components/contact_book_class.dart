@@ -24,15 +24,25 @@ class ContactBook extends ValueNotifier<list><Contact>> {
 
 // Simple Add Function on Contact Book
   void add({required Contact contact}) {
-    _contacts.add(contact);
+    final contacts = value; 
+    contacts.add(contact); 
+    // value = contacts; 
+    notifyListeners(); 
+     // updating 'add(...)' function to use value instead. Before, _contacts.add(contact)
   }
 
   // Simple Remove Function on Contact Book
   void remove({required Contact contact}) {
-    _contacts.remove(contact);
+  //  _contacts.remove(contact);
+  final contacts = value; 
+  if (contacts.contains(contact)) {
+    contacts.remove(contact); 
+    notifyListeners(); 
+  }
   }
 
   // A function to retrieve contacts with index
   Contact? contact({required int atIndex}) =>
-      _contacts.length > atIndex ? _contacts[atIndex] : null;
+//       _contacts.length > atIndex ? _contacts[atIndex] : null;
+ value.length > atIndex ? value[atIndex] : null; 
 }

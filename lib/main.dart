@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 // Using ValueNotifier : To notify HomePage about changes to Contact Book.
 
 class HomePage extends StatelessWidget {

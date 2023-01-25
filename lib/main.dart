@@ -42,13 +42,16 @@ class HomePage extends StatelessWidget {
         body: ValueListenableBuilder(
             valueListenable: ContactBook(),
             builder: (contact, value, child) {
-              final contacts = value as List<Contact>;
+              final contacts = value;
               return ListView.builder(
                   itemCount: contacts.length,
                   itemBuilder: (context, index) {
                     final contact = contacts[index];
                     return Dismissible(
-                      // widgets to dismiss cells.
+                      // widgets to dismiss cells.i.e to Removing Contacts.
+                      onDismissed: (direction) {
+                        ContactBook().remove(contact: contact);
+                      },
                       key: ValueKey(contact.id),
                       child: Material(
                         color: Colors.white,

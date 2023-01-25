@@ -39,16 +39,18 @@ class HomePage extends StatelessWidget {
           title: const Text('Contact Book'),
           centerTitle: true,
         ),
-        body: ListView.builder(
-            itemCount: contactBook.length,
-            itemBuilder: (context, index) {
-              final contact = contactBook.contact(atIndex: index)!;
-              return ListTile(
-                title: Text(contact.name),
-              );
+        body: ValueListenableBuilder(
+            valueListenable: ContactBook(),
+            builder: (contact, value, child) {
+              return ListView.builder(
+                  itemCount: contactBook.length,
+                  itemBuilder: (context, index) {
+                    final contact = contactBook.contact(atIndex: index)!;
+                    return ListTile(
+                      title: Text(contact.name),
+                    );
+                  });
             }),
-
-        // using floating action button press, send user to NewContactView.
         floatingActionButton: FloatingActionButton(
           onPressed: () async {
             await Navigator.of(context).pushNamed('/new-contact');
@@ -57,3 +59,8 @@ class HomePage extends StatelessWidget {
         ));
   }
 }
+          
+         
+
+        // using floating action button press, send user to NewContactView.
+    

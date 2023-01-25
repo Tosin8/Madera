@@ -47,8 +47,16 @@ class HomePage extends StatelessWidget {
                   itemCount: contacts.length,
                   itemBuilder: (context, index) {
                     final contact = contacts[index];
-                    return ListTile(
-                      title: Text(contact.name),
+                    return Dismissible(
+                      // widgets to dismiss cells.
+                      key: ValueKey(contact.id),
+                      child: Material(
+                        color: Colors.white,
+                        elevation: 6.0,
+                        child: ListTile(
+                          title: Text(contact.name),
+                        ),
+                      ),
                     );
                   });
             }),

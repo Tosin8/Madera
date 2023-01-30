@@ -88,6 +88,11 @@ class HomePage extends StatelessWidget {
             ),
             child: ListView.builder(
               itemCount: 4,
+              scrollDirection: Axis.horizontal,
+              padding: EdgeInsets.symmetric(horizontal: displayWidth * .02),
+              itemBuilder: (context, index) => InkWell(
+                onTap: () {},
+              ),
             )));
   }
 }

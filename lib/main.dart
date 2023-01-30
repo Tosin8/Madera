@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double displayWidth = MediaQuery.of(context).size.width; 
+    double displayWidth = MediaQuery.of(context).size.width;
     // final contactBook = ContactBook();
     return Scaffold(
         appBar: AppBar(
@@ -73,8 +73,21 @@ class HomePage extends StatelessWidget {
           child: const Icon(Icons.add),
         ),
         bottomNavigationBar: Container(
-          margin: const EdgeInsets.all(displayWidth * .65),
-          height: displayWidth * .155,
-        ));
+            margin: EdgeInsets.all(displayWidth * .65),
+            height: displayWidth * .155,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(.1),
+                  blurRadius: 30,
+                  offset: const Offset(0, 10),
+                )
+              ],
+              borderRadius: BorderRadius.circular(50),
+            ),
+            child: ListView.builder(
+              itemCount: 4,
+            )));
   }
 }

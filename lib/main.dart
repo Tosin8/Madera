@@ -33,6 +33,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double displayWidth = MediaQuery.of(context).size.width; 
     // final contactBook = ContactBook();
     return Scaffold(
         appBar: AppBar(
@@ -71,6 +72,10 @@ class HomePage extends StatelessWidget {
             await Navigator.of(context).pushNamed('/new-contact');
           },
           child: const Icon(Icons.add),
+        ),
+        bottomNavigationBar: Container(
+          margin: const EdgeInsets.all(displayWidth * .65),
+          height: displayWidth * .155,
         ));
   }
 }

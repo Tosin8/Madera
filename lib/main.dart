@@ -91,12 +91,51 @@ class HomePage extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               padding: EdgeInsets.symmetric(horizontal: displayWidth * .02),
               itemBuilder: (context, index) => InkWell(
-                onTap: () {
-                  setState(() {
-                    currentIndex = index;
-                  }); 
-                },
-              ),
+                  onTap: () {
+                    setState(() {
+                      currentIndex = index;
+                      HapticFeedback.lightImpact();
+                    });
+                  },
+                  splashColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  child: Stack(children: [
+                    SizedBox(
+                        width: screenWidth * .2125,
+                        child: Center(
+                            child: AnimatedContainer(
+                                duration: const Duration(seconds: 1),
+                                curve: Curves.fastLinearToSlowEaseIn,
+                                height: index == currentIndex
+                                    ? screenWidth * .12
+                                    : 0,
+                                width: index == currentIndex
+                                    ? screenWidth * .2125
+                                    : 0,
+                                decoration: BoxDecoration(
+                                  color: index == currentIndex
+                                      ? Colors.blueAccent.withOpacity(.2)
+                                      : Colors.transparent,
+                                  borderRadius: BorderRadius.circular(50),
+                                )))),
+                    Container(
+                        width: screenWidth * .2125,
+                        alignment: Alignment.center,
+                        child: Icon(
+                          listOfIcons[index],
+                          size: screenWidth * .076,
+                          color: index == currentIndex
+                              ? Colors.blueAccent
+                              : Colors.black26,
+                        ))
+                  ])),
             )));
   }
+
+  List<IconData> listOfIcons = [
+    Icons.contact,
+    Icons.receipt_long,
+    Icons.dialpad,
+    Icons.favorite,
+  ];
 }

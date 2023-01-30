@@ -91,7 +91,11 @@ class HomePage extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               padding: EdgeInsets.symmetric(horizontal: displayWidth * .02),
               itemBuilder: (context, index) => InkWell(
-                onTap: () {},
+                onTap: () {
+                  setState(() {
+                    currentIndex = index;
+                  }); 
+                },
               ),
             )));
   }

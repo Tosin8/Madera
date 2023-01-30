@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'components/contact_book_class.dart';
 import 'components/new_contact.dart';
 

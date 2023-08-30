@@ -10,6 +10,6 @@ class SplashBody extends StatefulWidget {
 class _SplashBodyState extends State<SplashBody> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ();
   }
 }

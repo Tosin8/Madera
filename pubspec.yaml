@@ -55,6 +55,9 @@ flutter:
      - assets/category/sofa.png
      - assets/category/table_bkg.jpg
      - assets/category/table.png
+     - assets/splash/1.jpg
+     - assets/splash/2.jpg
+     - assets/splash/3.jpg
 
 
 

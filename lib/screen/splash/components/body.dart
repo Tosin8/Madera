@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:svg_flutter/svg_flutter.dart';
 
 class SplashBody extends StatefulWidget {
@@ -10,6 +11,7 @@ class SplashBody extends StatefulWidget {
 
 class _SplashBodyState extends State<SplashBody> {
   final controller = PageController();
+  bool isLastPage = false;
 
   @override
   void dispose() {
@@ -26,7 +28,7 @@ class _SplashBodyState extends State<SplashBody> {
       child: PageView(controller: controller, children: [
         Stack(children: [
           Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/splash/1.jpg'),
                     fit: BoxFit.cover)),
@@ -44,7 +46,7 @@ class _SplashBodyState extends State<SplashBody> {
                   ])),
             ),
           ),
-          const Positioned(
+          Positioned(
               left: 30,
               top: 500,
               child: Column(
@@ -66,6 +68,10 @@ class _SplashBodyState extends State<SplashBody> {
                       color: Colors.white,
                     ),
                   ),
+                  SizedBox(height: 40),
+                  Center(
+                      child:
+                          SmoothPageIndicator(controller: controller, count: 3))
                 ],
               )),
         ]),
@@ -89,7 +95,7 @@ class _SplashBodyState extends State<SplashBody> {
                   ])),
             ),
           ),
-          const Positioned(
+          Positioned(
               left: 30,
               top: 500,
               child: Column(
@@ -114,6 +120,10 @@ class _SplashBodyState extends State<SplashBody> {
                       ),
                     ),
                   ),
+                  SizedBox(height: 40),
+                  Center(
+                      child:
+                          SmoothPageIndicator(controller: controller, count: 3))
                 ],
               )),
         ]),
@@ -137,7 +147,7 @@ class _SplashBodyState extends State<SplashBody> {
                   ])),
             ),
           ),
-          const Positioned(
+          Positioned(
               left: 30,
               top: 500,
               child: Column(
@@ -159,6 +169,10 @@ class _SplashBodyState extends State<SplashBody> {
                       color: Colors.white,
                     ),
                   ),
+                  SizedBox(height: 40),
+                  Center(
+                      child: SmoothPageIndicator(
+                          controller: controller, count: 3)),
                 ],
               )),
         ]),

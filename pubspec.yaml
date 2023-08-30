@@ -45,9 +45,22 @@ flutter:
      - assets/icons/search.svg
      - assets/icons/user.svg
      - assets/icons/spinner.gif
+     - assets/category/cabinet_bkg.jpg
+     - assets/category/cabinet.png
+     - assets/category/home_deco.png
+     - assets/category/home_deco_bkg.jpg
+     - assets/category/light_bkg.jpg
+     - assets/category/light.png
+     - assets/category/sofa_bkg.jpg
+     - assets/category/sofa.png
+     - assets/category/table_bkg.jpg
+     - assets/category/table.png
 
 
-     - images/a_dot_ham.jpeg
+
+
+
+   
 
 
 

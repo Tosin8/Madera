@@ -33,7 +33,32 @@ class _SplashBodyState extends State<SplashBody> {
                           Colors.black.withOpacity(.1)
                         ])),
                   ),
-                )
+                ),
+                const Positioned(
+                  left: 30,
+                  top: 500,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(right: 70),
+                        child: Text(
+                          'Ultra Modern Home',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Text(
+                        'Our products combine functional utility \n with elegance, kepping in view the \n efficient and of floor space.',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ],
             )));
   }

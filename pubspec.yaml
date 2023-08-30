@@ -1,76 +1,76 @@
-name: furniture_app_ui
+name: Madera
 description: An ecommerce app ui for furniture purchase.
 
-
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
 
 version: 1.0.0+1
 
 environment:
   sdk: '>=2.18.5 <3.0.0'
 
-
 dependencies:
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-
-
-  cupertino_icons: ^1.0.2
+  smooth_page_indicator: ^1.1.0
+  svg_flutter: ^0.0.1
   uuid: ^3.0.7
 
 dev_dependencies:
+  flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.0
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
 # The following section is specific to Flutter packages.
 flutter:
 
-  
   uses-material-design: true
 
   assets:
-     - assets/icons/arrow-long-left.svg
-     - assets/icons/bag.svg
-     - assets/icons/check.svg
-     - assets/icons/home.svg
-     - assets/icons/menu.svg
-     - assets/icons/ripple.gif
-     - assets/icons/scan.svg
-     - assets/icons/search.svg
-     - assets/icons/user.svg
-     - assets/icons/spinner.gif
-     - assets/category/cabinet_bkg.jpg
-     - assets/category/cabinet.png
-     - assets/category/home_deco.png
-     - assets/category/home_deco_bkg.jpg
-     - assets/category/light_bkg.jpg
-     - assets/category/light.png
-     - assets/category/sofa_bkg.jpg
-     - assets/category/sofa.png
-     - assets/category/table_bkg.jpg
-     - assets/category/table.png
-     - assets/splash/1.jpg
-     - assets/splash/2.jpg
-     - assets/splash/3.jpg
-
-
-
-
-
-   
-
-
-
-  
+    - assets/icons/arrow-long-left.svg
+    - assets/icons/bag.svg
+    - assets/icons/check.svg
+    - assets/icons/home.svg
+    - assets/icons/menu.svg
+    - assets/icons/ripple.gif
+    - assets/icons/scan.svg
+    - assets/icons/search.svg
+    - assets/icons/user.svg
+    - assets/icons/spinner.gif
+    - assets/category/cabinet_bkg.jpg
+    - assets/category/cabinet.png
+    - assets/category/home_deco.png
+    - assets/category/home_deco_bkg.jpg
+    - assets/category/light_bkg.jpg
+    - assets/category/light.png
+    - assets/category/sofa_bkg.jpg
+    - assets/category/sofa.png
+    - assets/category/table_bkg.jpg
+    - assets/category/table.png
+    - assets/splash/1.jpg
+    - assets/splash/2.jpg
+    - assets/splash/3.jpg
+    - assets/icons/arrow_right.svg
+    - assets/icons/bell.svg
+    - assets/icons/back_icon.svg
+    - assets/icons/arrow-long-left.svg
+    - assets/icons/Bell.svg
+    - assets/icons/Bill Icon.svg
+    - assets/icons/Cart Icon.svg
+    - assets/icons/Lock.svg
+    - assets/icons/Log out.svg
+    - assets/icons/Mail.svg
+    - assets/icons/menu.svg
+    - assets/icons/Phone.svg
+    - assets/icons/Plus Icon.svg
+    - assets/icons/Phone.svg
+    - assets/icons/Plus Icon.svg
+    - assets/icons/Search Icon.svg
   # fonts:
   #   - family: Schyler
-  #     fonts:
+  #     fonts:P
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
@@ -80,4 +80,3 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
-  

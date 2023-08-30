@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:svg_flutter/svg_flutter.dart';
 
 class SplashBody extends StatefulWidget {
   const SplashBody({super.key});
@@ -9,18 +8,40 @@ class SplashBody extends StatefulWidget {
 }
 
 class _SplashBodyState extends State<SplashBody> {
+  List<Map<String, String>> splashData = [
+    {
+      'image': 'assets/images/splash/1.jpg',
+      'maintext': 'Ultra Modern Home',
+      'subtext':
+          ' Our products combine functional utility \n with elegance, kepping in view the \n efficient and of floor space.',
+    },
+    {
+      'image': 'assets/images/splash/2.jpg',
+      'maintext': 'Top Notch Decorations',
+      'subtext':
+          ' With selective combination from our \n interior expert, makes home color and decorations\n more appealing. ',
+    },
+    {
+      'image': 'assets/images/splash/3.jpg',
+      'maintext': 'Ultra Modern Home',
+      'subtext':
+          ' Our products combine functional utility \n with elegance, kepping in view the \n efficient and of floor space.',
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
         child: SizedBox(
-      width: double.infinity,
-      child: SplashScreenContent(
-        image: 'assets/splash/1.jpg',
-        maintext: 'Ultra Modern Home',
-        subtext:
-            'Our products combine functional utility \n with elegance, kepping in view the \n efficient and of floor space.',
-      ),
-    ));
+            width: double.infinity,
+            child: PageView.builder(
+              itemBuilder: (context, index) => const SplashScreenContent(
+                image: 'assets/splash/1.jpg',
+                maintext: 'Ultra Modern Home',
+                subtext:
+                    'Our products combine functional utility \n with elegance, kepping in view the \n efficient and of floor space.',
+              ),
+            )));
   }
 }
 

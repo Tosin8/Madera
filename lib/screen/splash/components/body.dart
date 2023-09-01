@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../home/home_screen.dart';
+
 class SplashBody extends StatefulWidget {
   const SplashBody({super.key});
 
@@ -177,18 +179,23 @@ class _SplashBodyState extends State<SplashBody> {
         bottomSheet: isLastPage
             ? TextButton(
                 style: TextButton.styleFrom(
-                  // shape: RoundedRectangleBorder(
-                  //   borderRadius: BorderRadius.circular(80),
-                  // ),
-                  foregroundColor: Colors.white, backgroundColor: Colors.teal.shade600,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(80),
+                  ),
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.teal.shade600,
                   minimumSize: const Size.fromHeight(80),
                 ),
-                onPressed: () async {},
-                child: Text('Get Started'),
+                onPressed: () async {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => const HomePage()),
+                  );
+                },
+                child: const Text('Get Started'),
               )
             : Container(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
-                height: 50,
+                height: 80,
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

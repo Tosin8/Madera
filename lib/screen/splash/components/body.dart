@@ -180,9 +180,11 @@ class _SplashBodyState extends State<SplashBody> {
           ]),
         ),
         bottomSheet: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          height: 80,
-        ),
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            height: 40,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [TextButton(onPressed: onPressed, child: child)])),
       ),
     );
   }

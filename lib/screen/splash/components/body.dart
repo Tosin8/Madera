@@ -188,7 +188,11 @@ class _SplashBodyState extends State<SplashBody> {
                         activeDotColor: Colors.teal.shade700),
                   )),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      controller.nextPage(
+                          duration: Duration(milliseconds: 500),
+                          curve: Curves.easeIn);
+                    },
                     child: Text('Next'),
                   ),
                 ])),

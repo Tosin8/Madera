@@ -182,6 +182,10 @@ class _SplashBodyState extends State<SplashBody> {
                       child: SmoothPageIndicator(
                     controller: controller,
                     count: 3,
+                    effect: WormEffect(
+                        spacing: 16,
+                        dotColor: Colors.black26,
+                        activeDotColor: Colors.teal.shade700),
                   )),
                   TextButton(
                     onPressed: () {},

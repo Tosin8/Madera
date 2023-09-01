@@ -14,16 +14,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Madera',
             style: TextStyle(
-              fontSize: 18,
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.bold,
-            ),
+                fontSize: 18,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Great Vibes'),
           ),
           centerTitle: true,
         ),
-        body: Text('Hello'));
+        body: const Text('Hello'));
   }
 }

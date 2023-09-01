@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../home/home_screen.dart';
@@ -187,6 +188,10 @@ class _SplashBodyState extends State<SplashBody> {
                   minimumSize: const Size.fromHeight(80),
                 ),
                 onPressed: () async {
+                  // navigate directly to home page
+                  final prefs = await SharedPreferences.getInstance();
+                  prefs.setBool('showHome', true);
+
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) => const HomePage()),
                   );

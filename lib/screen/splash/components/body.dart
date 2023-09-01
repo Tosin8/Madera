@@ -173,7 +173,11 @@ class _SplashBodyState extends State<SplashBody> {
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TextButton(onPressed: () {}, child: Text('Skip')),
+                  TextButton(
+                      onPressed: () {
+                        controller.jumpToPage(2);
+                      },
+                      child: Text('Skip')),
                   Center(
                       child: SmoothPageIndicator(
                     controller: controller,

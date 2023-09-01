@@ -69,10 +69,6 @@ class _SplashBodyState extends State<SplashBody> {
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(height: 40),
-                      Center(
-                          child: SmoothPageIndicator(
-                              controller: controller, count: 3))
                     ],
                   )),
             ]),
@@ -121,10 +117,6 @@ class _SplashBodyState extends State<SplashBody> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 40),
-                      Center(
-                          child: SmoothPageIndicator(
-                              controller: controller, count: 3))
                     ],
                   )),
             ]),
@@ -170,10 +162,6 @@ class _SplashBodyState extends State<SplashBody> {
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(height: 40),
-                      Center(
-                          child: SmoothPageIndicator(
-                              controller: controller, count: 3)),
                     ],
                   )),
             ]),
@@ -181,10 +169,21 @@ class _SplashBodyState extends State<SplashBody> {
         ),
         bottomSheet: Container(
             padding: const EdgeInsets.symmetric(horizontal: 30),
-            height: 40,
+            height: 50,
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [TextButton(onPressed: onPressed, child: child)])),
+                children: [
+                  TextButton(onPressed: () {}, child: Text('Skip')),
+                  Center(
+                      child: SmoothPageIndicator(
+                    controller: controller,
+                    count: 3,
+                  )),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text('Next'),
+                  ),
+                ])),
       ),
     );
   }

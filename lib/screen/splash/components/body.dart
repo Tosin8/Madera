@@ -180,8 +180,7 @@ class _SplashBodyState extends State<SplashBody> {
                   // shape: RoundedRectangleBorder(
                   //   borderRadius: BorderRadius.circular(80),
                   // ),
-                  primary: Colors.white,
-                  backgroundColor: Colors.teal.shade600,
+                  foregroundColor: Colors.white, backgroundColor: Colors.teal.shade600,
                   minimumSize: const Size.fromHeight(80),
                 ),
                 onPressed: () async {},

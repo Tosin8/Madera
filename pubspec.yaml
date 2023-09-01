@@ -1,4 +1,4 @@
-name: Madera
+name: madera
 description: An ecommerce app ui for furniture purchase.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

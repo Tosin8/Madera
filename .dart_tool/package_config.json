@@ -218,13 +218,13 @@
       "languageVersion": "2.19"
     },
     {
-      "name": "Madera",
+      "name": "madera",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-08-30T05:27:57.042131Z",
+  "generated": "2023-09-01T23:07:32.161155Z",
   "generator": "pub",
   "generatorVersion": "3.1.0"
 }

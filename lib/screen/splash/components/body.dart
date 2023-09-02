@@ -192,6 +192,7 @@ class _SplashBodyState extends State<SplashBody> {
                   final prefs = await SharedPreferences.getInstance();
                   prefs.setBool('showHome', true);
 
+                  // ignore: use_build_context_synchronously
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) => const HomePage()),
                   );

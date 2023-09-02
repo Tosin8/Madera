@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:svg_flutter/svg.dart';
+
+import '../splash/splash_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -23,6 +27,23 @@ class _HomePageState extends State<HomePage> {
                 fontFamily: 'Great Vibes'),
           ),
           centerTitle: true,
+          actions: [
+            IconButton(
+                onPressed: () {},
+                icon: SvgPicture.asset('assets/icons/bell.svg')),
+            IconButton(
+              icon: const Icon(Icons.logout),
+              onPressed: () async {
+                // navigate directly to onboard page.
+                final prefs = await SharedPreferences.getInstance();
+                prefs.setBool('showHome', false);
+
+                // ignore: use_build_context_synchronously
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => const SplashScreen()));
+              },
+            ),
+          ],
         ),
         body: const Text('Hello'));
   }

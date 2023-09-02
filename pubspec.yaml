@@ -57,17 +57,17 @@ flutter:
     - assets/icons/bell.svg
     - assets/icons/back_icon.svg
     - assets/icons/arrow-long-left.svg
-    - assets/icons/Bell.svg
-    - assets/icons/Bill Icon.svg
-    - assets/icons/Cart Icon.svg
+    - assets/icons/bell.svg
+    - assets/icons/bill_icon.svg
+    - assets/icons/cart_icon.svg
     - assets/icons/Lock.svg
-    - assets/icons/Log out.svg
-    - assets/icons/Mail.svg
+    - assets/icons/log_out.svg
+    - assets/icons/mail.svg
     - assets/icons/menu.svg
     - assets/icons/Phone.svg
-    - assets/icons/Plus Icon.svg
-    - assets/icons/Phone.svg
-    - assets/icons/Plus Icon.svg
+    - assets/icons/plus_icon.svg
+    - assets/icons/phone.svg
+    - assets/icons/plus_icon.svg
     - assets/icons/Search Icon.svg
   fonts:
     #   - family: Schyler

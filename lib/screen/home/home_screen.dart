@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         // bottomNavigationBar: BottomNavigationBar(items: items),
-        body: const Column(
+        body: Column(
           children: [
             Text(
               'Find modern \n furniture for you.',
@@ -56,6 +56,15 @@ class _HomePageState extends State<HomePage> {
             TextField(
               decoration: InputDecoration(
                 hintText: ' Make your search',
+                prefixIcon: Icon(Icons.search),
+              ),
+            ),
+            Container(
+              height: 30,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Colors.white.withOpacity(8),
               ),
             )
           ],

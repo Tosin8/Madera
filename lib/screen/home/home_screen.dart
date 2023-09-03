@@ -46,11 +46,17 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         // bottomNavigationBar: BottomNavigationBar(items: items),
-        body: Column(
+        body: const Column(
           children: [
             Text(
               'Find modern \n furniture for you.',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(
+                hintText: ' Make your search',
+              ),
             )
           ],
         ));

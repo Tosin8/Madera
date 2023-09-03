@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
+        bottomNavigationBar: BottomNavigationBar(items: items),
         body: const Text('Hello'));
   }
 }

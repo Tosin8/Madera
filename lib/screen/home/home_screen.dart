@@ -65,9 +65,14 @@ class _HomePageState extends State<HomePage> {
                   height: 30,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Colors.white.withOpacity(8),
-                  ),
+                      borderRadius: BorderRadius.circular(30),
+                      color: Colors.white.withOpacity(8),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.7),
+                          spreadRadius: 2.0,
+                        )
+                      ]),
                   child: Row(
                     children: [
                       Column(

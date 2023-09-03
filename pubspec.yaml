@@ -69,6 +69,7 @@ flutter:
     - assets/icons/phone.svg
     - assets/icons/plus_icon.svg
     - assets/icons/Search Icon.svg
+    - assets/products/table/1.jpg
   fonts:
     #   - family: Schyler
     #     fonts:P

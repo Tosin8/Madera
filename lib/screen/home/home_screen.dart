@@ -48,25 +48,45 @@ class _HomePageState extends State<HomePage> {
         // bottomNavigationBar: BottomNavigationBar(items: items),
         body: Column(
           children: [
-            Text(
+            const Text(
               'Find modern \n furniture for you.',
               style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
-            TextField(
+            const SizedBox(height: 10),
+            const TextField(
               decoration: InputDecoration(
                 hintText: ' Make your search',
                 prefixIcon: Icon(Icons.search),
               ),
             ),
-            Container(
-              height: 30,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                color: Colors.white.withOpacity(8),
-              ),
-            )
+            Material(
+              elevation: 15,
+              child: Container(
+                  height: 30,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.white.withOpacity(8),
+                  ),
+                  child: Row(
+                    children: [
+                      Column(
+                        children: [
+                          Text('COLLECTION'),
+                          SizedBox(height: 5),
+                          Text(
+                            'New',
+                            style: TextStyle(
+                                fontSize: 18, color: Colors.blueAccent),
+                          ),
+                          Text('Arrivals'),
+                        ],
+                      ),
+                      Expanded(
+                          child: Image.asset('assets/products/table/1.jpg')),
+                    ],
+                  )),
+            ),
           ],
         ));
   }
